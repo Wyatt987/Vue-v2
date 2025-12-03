@@ -34,7 +34,7 @@ const vue_app = Vue.createApp({
             // This holds your movies.json data.
             movies: [],
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-            title: "IMDB + Wyatt's Top 8 Movies",
+            smallTitle: "IMDB + Wyatt's Top 8 Movies",
             owner: "Wyatt Bedor",
             github: "https://github.com/Wyatt987/Vue-v2"
       }
@@ -75,10 +75,10 @@ const vue_app = Vue.createApp({
             return `${monthText} ${day}, ${year}`
       },
       like(index) {
-            this.movies[index].likes += 1
+            this.movies[index].likes ++
       },
       dislike(index) {
-            this.movies[index].dislikes += 1
+            this.movies[index].dislikes ++
       }
       }
       
