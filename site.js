@@ -41,34 +41,38 @@ const vue_app = Vue.createApp({
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-      },
-      getMonthText(dateArray) {
-            switch (dataArray[0]) {
+            getMonthText(dateArray) {
+            const monthNum = dateArray[1]
+            const day = dateArray[2]
+            const year = dateArray[0]
+            let monthText = ""
+            switch (monthNum) {
             case 1:
-                  return "January"
+                  monthText = "January"
             case 2:
-                  return "February"
+                  monthText = "February"
             case 3:
-                  return "March"
+                  monthText = "March"
             case 4:
-                  return "April"
+                  monthText = "April"
             case 5:
-                  return "May"
+                  monthText = "May"
             case 6:
-                  return "June"
+                  monthText = "June"
             case 7:
-                  return "July"
+                  monthText = "July"
             case 8:
-                  return "August"
+                  monthText = "August"
             case 9:
-                  return "September"
+                  monthText = "September"
             case 10:
-                  return "October"
+                  monthText = "October"
             case 11:
-                  return "November"
+                  monthText = "November"
             case 12:
-                  return "December"
+                  monthText = "December"
             }
+            return `${monthText} ${day}, ${year}`
       },
       like(index) {
             this.movies[index].likes += 1
@@ -76,6 +80,8 @@ const vue_app = Vue.createApp({
       dislike(index) {
             this.movies[index].dislikes += 1
       }
+      }
+      
 })
 
 vue_app.mount("#vue_app")
