@@ -75,11 +75,14 @@ const vue_app = Vue.createApp({
             return `${monthText} ${day}, ${year}`
       },
       like(index) {
-            this.movies[index].likes ++
+            movies[index].likes ++
       },
       dislike(index) {
-            this.movies[index].dislikes ++
-      }
+            movies[index].dislikes ++
+      },
+      posterClick(index) {
+            let movie = this.movies[index]
+            movie.posterindex ++
       }
       
 })
