@@ -25,7 +25,7 @@
 	<!--Step 2-->
 	<div id="vue_app" class="container">
 
-	    <div class="header">
+	    <div class="header bg">
 
 	      <div class="container">
 	        <h1 id="app_title">{{ smallTitle }}</h1>
@@ -33,20 +33,20 @@
 
 	    </div>
 
-	    <div class="main">
+	    <div class="main border border-dark bg">
 
 	      <div class="row">
 
 	        <div class="col-md-6" v-for="(movie, index) in movies" :key="index">
-	            <div class="thumbnail">
-
-						<img class="poster img-fluid" @click="posterClick(index)" :src="movie.posters[movie.posterindex]"/>
-						<div class="imageInfo"> {{ movie.posterindex + 1 }} / {{ movie.posters.length }}</div>
-						<p class="title">{{ movie.title }} ({{ movie.country }})</p>
-						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
-						<p class="runtime">Runtime: {{timeText( movie.runtime  )}}</p>
-						<p class="released">Released: {{ getMonthText(movie.released) }} | Rated: {{ movie.rating }}</p>
-						<p class="websites" >Websites: <a :href="movie.imdb"> imdb </a> | <a :href="movie.website"> Website</a></p>
+	            <div class="thumbnail border border-secondary bg-2 hover-effect">
+					
+						<img class="poster img-fluid d-flex justify-content-center align-items-center" @click="posterClick(index)" :src="movie.posters[movie.posterindex]"/>
+						<div class="imageInfo text-light"> {{ movie.posterindex + 1 }} / {{ movie.posters.length }}</div>
+						<p class="title text-light">{{ movie.title }} ({{ movie.country }})</p>
+						<div class="rating-badge"><i class="bi bi-star"></i> {{ movie.iscore }}</div>
+						<p class="runtime text-light">Runtime: {{timeText( movie.runtime  )}}</p>
+						<p class="released text-light">Released: {{ getMonthText(movie.released) }} | Rated: {{ movie.rating }}</p>
+						<p class="websites text-light" >Websites: <a :href="movie.imdb"> imdb </a> | <a :href="movie.website"> Website</a></p>
 
 			            <div class="social">
 			              <p class="likes" @click="like(index)"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movie.likes }}</p>

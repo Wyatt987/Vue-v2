@@ -5,7 +5,8 @@ body {
     padding: 0;
     width: 100%;
     overflow: auto;
-    background-image: url(img/geometry.jpg);
+    background: linear-gradient(135deg, #ff7a18, #ff3e55, #af002d);
+
 }
 
 /* This stylizes the header area */
@@ -35,8 +36,10 @@ body {
 .thumbnail img {
     margin-top: 10px;
     margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 5px;
-    border: 2px dashed black;
+    border: 2px dashed gold;
     max-height: 600px;
     max-width: 100%;
 }
@@ -64,6 +67,17 @@ body {
     font-size: 14px;
     font-weight: 200;
 }
+.rating-badge {
+    position: absolute;
+    top: 50px;
+    right: 45%;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 4px 10px;
+    border-radius: 8px;
+    color: gold;
+    font-weight: bold;
+    font-size: .95rem;
+}
 
 /* This shapes your IMDB score area */
 .score {
@@ -79,7 +93,15 @@ body {
     position: absolute;
     top: 50px;
     right: 25px;
+    
 }
+.title-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
 
 /* This contains your like and dislike buttons */
 .social {
@@ -136,4 +158,15 @@ body {
 .dislikes:hover {
     background-color: #fdd6d6;
     color: #F65A5B;
+}
+.bg {
+    background: linear-gradient(135deg, #ff7a18, #c40044, #7a0035);
+}
+.bg-2 {
+    background: linear-gradient(135deg, #ff5f1f, #ff2e63, #9b0032);
+}
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
