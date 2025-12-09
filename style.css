@@ -5,8 +5,7 @@ body {
     padding: 0;
     width: 100%;
     overflow: auto;
-    background: linear-gradient(135deg, #ff7a18, #ff3e55, #af002d);
-
+    background-image: url(img/lego-background.jpg)
 }
 
 /* This stylizes the header area */
